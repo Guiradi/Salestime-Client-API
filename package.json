@@ -1,0 +1,12 @@
+{
+  "name": "client-api",
+  "version": "1.0.0",
+  "description": "Consumidor da API Salestime",
+  "main": "index.js",
+  "author": "Guilherme Ferreira",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
