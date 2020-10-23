@@ -17,6 +17,8 @@ class SalestimeAuthentication {
 
       console.log(token);
       this.accessToken = token;
+
+      return token;
     } catch (error) {
       throw error;
     }
