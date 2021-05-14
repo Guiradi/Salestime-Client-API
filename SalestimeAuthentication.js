@@ -12,7 +12,8 @@ class SalestimeAuthentication {
       const {
         data: { token = null },
       } = await axios.post("/auth", {
-        api_key: "YOUR_SALESTIME_API_KEY",
+        api_key:
+          "48a3f58d59e40705632c1c3b0ec82781QkZb7AKUel0MbxCTZv4YJKp3nMfYjzg+3h4a2UnTtfw=",
       });
 
       console.log(token);

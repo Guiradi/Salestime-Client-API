@@ -1,22 +1,8 @@
 const SalestimeOpportunities = require("./SalestimeOpportunities");
 const SalestimeAuthentication = require("./SalestimeAuthentication");
+const SalestimeOrganizations = require("./SalestimeOrganizations");
 
-// async function testAuth() {
-//   try {
-//     const AuthClass = new SalestimeAuthentication();
-//     console.log("Get Token: ");
-//     await AuthClass.getAccessToken();
-//     console.log("Get User: ");
-//     await AuthClass.getUser();
-//     console.log("Revoke Token: ");
-//     await AuthClass.revokeToken();
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// }
-
-async function testOpportunities() {
+async function start() {
   try {
     const AuthClass = new SalestimeAuthentication();
 
@@ -25,8 +11,8 @@ async function testOpportunities() {
 
     const OpportunitiesClass = new SalestimeOpportunities(token);
 
-    console.log(`Fetch many opportunities: `);
-    await OpportunitiesClass.getManyOpportunities();
+    console.log(`Update opportunity: `);
+    await OpportunitiesClass.updateOpportunity();
 
     console.log("Revoke Token: ");
     await AuthClass.revokeToken();
@@ -36,4 +22,4 @@ async function testOpportunities() {
   }
 }
 
-testOpportunities();
+start();
