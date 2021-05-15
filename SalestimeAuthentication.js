@@ -1,6 +1,7 @@
 "use strict";
 
 const axios = require("./AxiosInstance");
+const { api_key } = require("./variables");
 
 class SalestimeAuthentication {
   constructor() {
@@ -12,8 +13,7 @@ class SalestimeAuthentication {
       const {
         data: { token = null },
       } = await axios.post("/auth", {
-        api_key:
-          "48a3f58d59e40705632c1c3b0ec82781QkZb7AKUel0MbxCTZv4YJKp3nMfYjzg+3h4a2UnTtfw=",
+        api_key,
       });
 
       console.log(token);

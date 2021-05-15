@@ -1,6 +1,7 @@
 const axios = require("axios");
+const { baseURL } = require("./variables");
 
 module.exports = axios.create({
-  baseURL: "https://api.supercrm.ezdevs.com.br",
+  baseURL,
   timeout: 5000,
 });

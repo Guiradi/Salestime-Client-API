@@ -1,11 +1,12 @@
 "use strict";
 
 const axios = require("axios");
+const { baseURL } = require("./variables");
 
 class SalestimeOrganizations {
   constructor(token) {
     this.axios = axios.create({
-      baseURL: "http://localhost:3333",
+      baseURL,
       timeout: 5000,
       headers: { Authorization: `Bearer ${token}` },
     });
